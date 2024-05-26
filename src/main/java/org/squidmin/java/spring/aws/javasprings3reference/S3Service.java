@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.auth.credentials.ProfileCredentialsProvider;
+import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.model.PutObjectRequest;
@@ -39,7 +40,7 @@ public class S3Service {
             .key(key)
             .build();
 
-        s3Client.putObject(putObjectRequest, software.amazon.awssdk.core.sync.RequestBody.fromInputStream(inputStream, inputStream.available()));
+        s3Client.putObject(putObjectRequest, RequestBody.fromInputStream(inputStream, inputStream.available()));
     }
 
     public void uploadFile(String key, Path filePath) {
@@ -49,7 +50,7 @@ public class S3Service {
             .key(key)
             .build();
 
-        s3Client.putObject(putObjectRequest, software.amazon.awssdk.core.sync.RequestBody.fromFile(filePath));
+        s3Client.putObject(putObjectRequest, RequestBody.fromFile(filePath));
 
         log.info("File uploaded to S3: {}", key);
     }

@@ -32,14 +32,14 @@ Demonstrate uploading a file to an S3 storage bucket using the AWS SDK for Java.
 1. Sign in to the AWS Management Console.
 2. Open the [IAM Identity Center](https://console.aws.amazon.com/singlesignon/home?region=us-east-1#/users).
    - In the IAM Identity Center dashboard, select "Permission sets" from the left navigation pane.
-   - Choose "Create a permission set".
+   - Choose "Create a permission set."
 3. Create a Custom Permission Set.
    - Choose "Create a custom permission set."
    - Give your permission set a name and description.
-   - Click "Next: Permissions".
+   - Click "Next: Permissions."
 4. Attach S3 Policies.
    - Click "Create inline policy."
-   - Use the following JSON policy to grant S3 access (`src/main/resources/s3-bucket-access-policy.json`).
+   - Use a JSON policy to grant S3 access (`src/main/resources/s3-bucket-access-policy.json`).
    - Click "Create Policy" and then "Next: Tags" (optional), then "Next: Review."
    - Review the permission set and click "Create."
 5. Assign the Permission Set to a User.
@@ -48,7 +48,7 @@ Demonstrate uploading a file to an S3 storage bucket using the AWS SDK for Java.
    - Select the account you want to assign the permission set to.
    - Click "Assign users."
    - Choose the user you want to assign the permission set to.
-   - Select the permission set you created (`S4AccessPermissionSet`).
+   - Select the permission set you created (`S3AccessPermissionSet`).
    - Click "Assign."
 
 ### Use the AWS CLI with IAM Identity Center User
