@@ -3,6 +3,7 @@ package org.squidmin.java.spring.aws.javasprings3reference;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.squidmin.java.spring.aws.javasprings3reference.service.S3Service;
 
 import java.nio.file.Paths;
 

@@ -1,0 +1,6 @@
+aws:
+  s3:
+    bucket: amphibia-test-bucket
+  credentials:
+    region: us-east-1
+  profile: AdministratorAccess-767397891488
